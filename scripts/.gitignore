@@ -1,0 +1,110 @@
+# Создаем .gitignore
+@"
+# Build outputs
+builds/android/*.apk
+builds/windows/*.exe
+builds/linux/*.AppImage
+dist/
+build/
+*.spec
+
+# Python
+__pycache__/
+*.py[cod]
+*`$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Game saves
+*.save
+clicker_save.json
+
+# Logs
+*.log
+logs/
+
+# Buildozer
+bin/
+*.buildozer/
+
+# PyInstaller
+*.manifest
+*.app
+
+# Temporary files
+*.tmp
+*.temp
+
+# Database
+*.db
+*.sqlite3
+
+# Packages
+*.egg
+*.egg-info
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+"@ | Out-File -FilePath .gitignore -Encoding UTF8

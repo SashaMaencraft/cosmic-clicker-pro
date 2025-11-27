@@ -1,0 +1,25 @@
+name: cosmicclicker
+version: 1.0.0
+
+platforms:
+  android:
+    requirements:
+      - python3
+      - kivy
+      - android
+    permissions:
+      - INTERNET
+      - WRITE_EXTERNAL_STORAGE
+
+  ios:
+    requirements:
+      - kivy
+      - ios
+
+  windows:
+    requirements:
+      - tkinter
+
+  web:
+    requirements:
+      - pyodide

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cosmic Clicker Pro</title>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    <style>
+        body { margin: 0; padding: 20px; background: #0f0f23; color: white; font-family: Arial; }
+        #game-container { max-width: 600px; margin: 0 auto; }
+        .mobile-warning { display: none; background: #ff6b6b; padding: 10px; margin: 10px 0; }
+        @media (max-width: 768px) { .mobile-warning { display: block; } }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div class="mobile-warning">
+            📱 Оптимизировано для мобильных устройств!
+        </div>
+        <div id="kivy-container"></div>
+    </div>
+
+    <script>
+        async function main() {
+            let pyodide = await loadPyodide();
+            // Загрузка Python кода игры
+            await pyodide.runPythonAsync(`
+                import js
+                from pyodide import create_proxy
+
+                # Здесь будет основной код игры
+                print("Cosmic Clicker Pro запущен в браузере!")
+            `);
+        }
+        main();
+    </script>
+</body>
+</html>
